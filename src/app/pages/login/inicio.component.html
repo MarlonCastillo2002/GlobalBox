@@ -1,0 +1,83 @@
+<ion-content>
+  <div class="main_content_div">
+    <div class="upper_div">
+      <img src="/assets/imgs/global-negativo.png" class="global-img" />
+    </div>
+    <div class="lower_div">
+      <div class="main_form_div">
+        <div class="segment_div">
+          <div class="inner_div" (click)="change(1)">
+            Log In
+            <div class="line_div" *ngIf="divt_true == 1"></div>
+          </div>
+
+          <div class="inner_div" (click)="change(2)">
+            Sign In
+            <div class="line_div" *ngIf="divt_true == 2"></div>
+          </div>
+        </div>
+
+        <div class="form_div" *ngIf="divt_true == 1">
+          <ion-input
+            type="text"
+            placeholder="Introduce tu correo"
+            [(ngModel)]="correo"
+          ></ion-input>
+          <ion-input
+            type="text"
+            placeholder="Introduce tu contraseña"
+            type="password"
+            minlength="6"
+            [(ngModel)]="password"
+          ></ion-input>
+          <ion-button expand="block" (click)="login()">Sign Up</ion-button>
+        </div>
+
+        <div class="form_div" *ngIf="divt_true == 2">
+          <ion-input type="text" placeholder="Nombre"></ion-input>
+          <ion-input
+            type="text"
+            placeholder="Introduzca su correo electronico"
+            [(ngModel)]="correo"
+          ></ion-input>
+          <ion-input
+            type="password"
+            placeholder="Introduzca su contraseña"
+            minlength="6"
+            [(ngModel)]="password"
+          ></ion-input>
+          <ion-input
+            type="password"
+            placeholder="Vuelva a repetir su contraseña"
+            minlength="6"
+          ></ion-input>
+          <ion-item>
+            <ion-select placeholder="Seleccione su país">
+              <ion-select-option value="bird">Ecuador</ion-select-option>
+              <ion-select-option value="cat">Mexico</ion-select-option>
+              <ion-select-option value="dog">Honduras</ion-select-option>
+              <ion-select-option value="honeybadger"
+                >Guatemala</ion-select-option
+              >
+            </ion-select>
+          </ion-item>
+          <ion-button expand="block" (click)="singIn()">Sign In</ion-button>
+        </div>
+      </div>
+
+      <div style="display: flex;" class="boton_redf">
+        <ion-fab-button  class="boton_redf" ><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+        <ion-fab-button  class="boton_redG" color="danger" ><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+        <ion-fab-button  class="boton_redG" color="success"  [routerLink]="['/map']"><ion-icon name="map-outline"></ion-icon></ion-fab-button>
+      </div>
+      <ion-label class="small_lbl"
+        >By clicking start, you agree to our
+        <span style="font-weight: bold">terms and conditions</span></ion-label
+      >
+
+
+    </div>
+  </div>
+
+
+</ion-content>

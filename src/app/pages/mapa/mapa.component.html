@@ -1,0 +1,123 @@
+<ion-content>
+
+
+  <ion-menu side="start" menuId="primerMenu" contentId="mapa" class="menu">
+    <ion-header>
+      <ion-toolbar color="danger">
+
+        <ion-title>Categorias</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+        <ion-item>
+          Gimnasios
+          <ion-icon name="barbell-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Hoteles
+          <ion-icon name="business-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Restaurantes
+          <ion-icon name="restaurant-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Cafeterias
+          <ion-icon name="cafe-sharp" slot="start" ></ion-icon>
+        </ion-item>
+        <ion-item>
+          Abogados
+          <ion-icon name="man-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Agencia de Viajes
+          <ion-icon name="airplane-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Heladeria
+          <ion-icon name="ice-cream-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Crossfit
+          <ion-icon name="barcode-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Laboratorio
+          <ion-icon name="medkit-sharp" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          Barberia
+          <ion-icon name="glasses-sharp" slot="start"></ion-icon>
+        </ion-item>
+      </ion-list>
+
+ 
+
+    </ion-content>
+  </ion-menu> 
+  <ion-router-outlet id="mapa"></ion-router-outlet>
+
+  
+  <ion-header>
+    <ion-toolbar color="danger"class="global" >
+
+      <ion-title class="title">
+        <img src="\assets\imgs\logoclub.png" class="logoclub">
+      </ion-title>
+     
+      <ion-menu-button color="light" menu="primerMenu" slot="start" class="menu">
+        
+      </ion-menu-button>
+ 
+     
+      <ion-icon name="calendar-sharp" slot="end" class="icon2"></ion-icon>
+      <ion-icon name="star-half-sharp" slot="end" class="icon" ></ion-icon>  
+      </ion-toolbar>
+
+</ion-header>
+  
+  <ion-searchbar
+  class="searchBar"
+  (click)="presentModal()">  
+  
+  
+  
+  
+</ion-searchbar>
+
+<div>
+  
+</div>
+<div id="map" class="map">
+</div>
+</ion-content>
+
+
+<ion-fab horizontal="end" vertical="bottom" slot="fixed">
+  
+  
+  <ion-fab-button
+  (click)="geolocationNative()"
+    color="light"
+    class="floating-button">
+  <ion-icon name="locate-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-button
+    color="light"
+    [routerLink]="['/socioestrategico']"
+    class="floating-button">
+    <ion-icon name="person-add-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-button
+    color="light"
+    class="floating-button"
+    [routerLink]="['/comprar']">
+    <ion-icon name="cart-outline"></ion-icon>
+  </ion-fab-button>
+
+  
+  </ion-fab>

@@ -1,0 +1,54 @@
+.map {
+  height: 100vh;
+  width: 100vw;
+  
+}
+.searchBar {
+  position: absolute;
+  z-index: 4;
+  margin-top: 15px;
+  width: 395px;
+  height: 37px;
+
+}
+ion-card ion-card-header .image-card {
+  height: 50% !important;
+  width: 50% !important;
+}
+.floating-button {
+  --background: #f32058 !important;
+ margin-top: 5px;
+}
+.info{
+  background-color: #f32058;
+}
+.global{
+  width: 390px;
+  height: 55px;
+}
+.icon{
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 7px;
+}
+.icon2{
+  width: 30px;
+  height: 30px;
+  margin-left: 25px;
+  margin-top: 7px;
+}
+.title{
+  margin-left: -25px;
+  margin-top: 7px;
+}
+.logoclub{
+  width: 185px;
+  height: 20px;
+  font-size:large;
+  margin-top: 2px;
+
+}
+.menu{
+  margin-top: 11px;
+}

@@ -1,0 +1,53 @@
+.principal-container{
+  width: 100%;
+  height: 100vh;
+
+
+  .ion-slide{
+      --bullet-background : #E0E0E0;
+      --bullet-background-active : var(--ion-color-main);
+  }
+  .principal-container-init{
+     width: 100%;
+     height: 95vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     .slide_img{
+        height: 290px;
+        width: 290px;
+      }
+
+      .start_btn{
+          margin-top: 30px;
+          width: 180px;
+          --border-radius: 5px;
+      }
+    }
+}
+.interfaz{
+    --background:url('https://i.pinimg.com/564x/fb/05/55/fb05556660f3e8ab577d21fb49b14fbc.jpg')
+}
+
+.slide_img{
+    animation-duration: 15s;
+    animation-direction: alternate;
+    animation: rotate 6s infinite ;
+  }
+  
+  @keyframes rotate {
+    from {
+    
+   
+      transform: rotateY(369deg) ;
+      
+    }
+  
+    to {
+      margin-left: 0%;
+   
+    }
+  }
+

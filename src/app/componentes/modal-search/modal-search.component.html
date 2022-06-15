@@ -1,0 +1,40 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title style="font-size: 1rem"
+      >Busca uno de nuestros socios estrategicos</ion-title
+    >
+    <ion-buttons slot="end">
+      <ion-button style="font-size: 1rem" (click)="dismissModal()"
+        >Cerrar</ion-button
+      >
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar
+    animated="true"
+    class="searchBar"
+    placeholder="Buscar"
+    [(ngModel)]="searchTerm"
+  ></ion-searchbar>
+  <ion-list>
+    <ion-card *ngFor="let usuario of usuarios | filter: searchTerm">
+      <ion-card-header>
+        <img src="\assets\imgs\IS-LG.png" class="image-card" />
+        <ion-card-header style="font-size: 3rem; color: #000">{{
+          usuario.NOMBRE
+        }}</ion-card-header>
+        <ion-card-subtitle>{{ usuario.CIUDAD }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ usuario.MAIL }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ usuario.DIRECCION }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ usuario.TELEFONO }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit
+        clean.
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
